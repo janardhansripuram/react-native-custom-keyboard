@@ -1,7 +1,7 @@
 {
-  "name": "react-native-natuan-custom-keyboard",
+  "name": "react-native-jana-custom-keyboard",
   "title": "React Native Custom Keyboard",
-  "version": "1.3.9",
+  "version": "0.0.1",
   "description": "TODO",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natuanorg/react-native-natuan-custom-keyboard.git",
-    "baseUrl": "https://github.com/natuanorg/react-native-natuan-custom-keyboard"
+    "url": "git+https://github.com/janardhansripuram/react-native-custom-keyboard.git",
+    "baseUrl": "https://github.com/janardhansripuram/react-native-custom-keyboard"
   },
   "keywords": [
     "react-native","react-native-keyboard", "react-native-custom-keyboard"
   ],
   "author": {
-    "name": "Nguyen Anh Tuan",
-    "email": "natuan.org@gmail.com"
+    "name": "Janardhan",
+    "email": "janardhansripuram@gmail.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
