@@ -1,4 +1,4 @@
-package com.yusha.customKeyboard;
+package com.jana.customKeyboard;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

@@ -28,7 +28,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.facebook.react.views.textinput.ReactEditText;
 
-import com.yusha.customKeyboard.CustomKeyBoardView;
+import com.jana.customKeyboard.CustomKeyBoardView;
 
 import java.lang.reflect.Method;
 

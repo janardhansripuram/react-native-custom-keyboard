@@ -18,19 +18,18 @@ import * as CustomKeyboard from './customKeyboard'
 export default class AwareCusKeyBoardScrollView extends PureComponent {
     state: Object
 
-    //防止自定义键盘切换之间的闪跳
     showKeyBoard: boolean
     resetTimeout: number
 
-    //监听系统键盘
+   
     showKeyBoardSub: any
     hideKeyboardSub: any
 
-    //监听自定义键盘
+    
     showCustomKeyBoardSub: any
     hideCustomKeyboardSub: any
 
-    //区分showSys->hideSys和showSys->showCus->hideSys之间的区别
+    
     flag: number
 
     constructor() {
@@ -70,7 +69,6 @@ export default class AwareCusKeyBoardScrollView extends PureComponent {
     _showSysKeyborad = (frames: Object) => {
         console.log('show system keyboard')
 
-        //防止自定义键盘跳到系统键盘出bug
         this.resetTimeout && clearTimeout(this.resetTimeout)
 
         this.flag++
@@ -79,7 +77,7 @@ export default class AwareCusKeyBoardScrollView extends PureComponent {
     _hideSysKeyboard = () => {
         this.flag--
         if(this.flag === 0) {
-            //之间切换状态到键盘不显示
+            
             this.showKeyBoard = false
             this._changeKeyBoardState()
         }
@@ -125,7 +123,7 @@ export default class AwareCusKeyBoardScrollView extends PureComponent {
         const currentlyTfNode = TextInput.State.currentlyFocusedField()
         const scrollViewNode = findNodeHandle(this.refs.scrollView)
 
-        //显示和隐藏键盘
+        
         if (this.state.showKeyBoard) {
             UIManager.measureInWindow(scrollViewNode, (x, y, width, height) => {
                 UIManager.measureLayout(

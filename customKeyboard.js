@@ -132,7 +132,6 @@ export class CustomTextInput extends Component {
 
     _handleAppStateChange = (nextAppState) => {
         if (nextAppState === 'background') {
-            //检查键盘
             if (TextInput.State.currentlyFocusedField() === findNodeHandle(this.input)) {
                 TextInput.State.blurTextInput(TextInput.State.currentlyFocusedField())
                 return true
@@ -155,12 +154,16 @@ export class CustomTextInput extends Component {
     }
 
     _onChangeText = (text) => {
+        // added to textInput MaxLength
+        const { maxLength } = this.props;
+        if (maxLength && !!text && text.length > maxLength) {
+            return;
+          }
         this.setState({text})
         this.props.onChangeText && this.props.onChangeText(text)
     }
 
     render() {
-        console.log('CustomTextInput.render')
         const {customKeyboardType, ...others} = this.props
         if (!customKeyboardType) {
             return (
@@ -169,7 +172,7 @@ export class CustomTextInput extends Component {
         }
         return (
             <TextInput {...others}
-                       //ref={this.onRef}
+                       ref={this.onRef}
                        onChangeText={this._onChangeText}
                        value={this.state.text}
             />

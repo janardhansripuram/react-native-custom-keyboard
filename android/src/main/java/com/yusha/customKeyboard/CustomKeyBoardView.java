@@ -1,13 +1,10 @@
-package com.yusha.customKeyboard;
+package com.jana.customKeyboard;
 
 import android.content.Context;
 import android.view.MotionEvent;
 
 import com.facebook.react.ReactRootView;
 
-/**
- * Created by hfmoney on 2017/4/27.
- */
 
 public class CustomKeyBoardView extends ReactRootView {
     public CustomKeyBoardView(Context context) {
